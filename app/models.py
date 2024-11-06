@@ -8,6 +8,7 @@ class User(Base):
     user_id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
     email = Column(String, unique=True, index=True)
+    address = Column(String, unique=False, index=True)
     profile_id = Column(Integer, ForeignKey("profiles.profile_id", ondelete="SET NULL"))
     
     # Establish a bidirectional relationship with Profile
