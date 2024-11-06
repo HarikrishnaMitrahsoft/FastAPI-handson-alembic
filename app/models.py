@@ -20,6 +20,7 @@ class Profile(Base):
     profile_id = Column(Integer, primary_key=True, index=True)
     bio = Column(String, index=True)
     user_id = Column(Integer, ForeignKey("users.user_id", ondelete="CASCADE"))
+    product = Column(String, index=True)
 
     # Establish a bidirectional relationship with User
     user = relationship("User", back_populates="profile", foreign_keys=[user_id])
