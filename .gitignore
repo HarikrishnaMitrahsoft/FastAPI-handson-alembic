@@ -1,2 +1,4 @@
 enc/
 .env
+venv/
+backup/
